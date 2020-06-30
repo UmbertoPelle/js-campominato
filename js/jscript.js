@@ -17,7 +17,11 @@ for (var i = 0; i < 5; i++) {
 
 // inserimento numero lista utente
 while (arrayUtente.length < 5) {
-  var numUtente = parseInt(prompt("dammi un numero"));
+  var numUtente = parseInt(prompt("inserisci un numero da 1 a 100:"));
+
+  while (isNaN(numUtente)) {
+    numUtente = parseInt(prompt("Devi inserire un valore valido:"));
+  }
 
   if (insideCheck(arrayPc, numUtente)) {
     alert("hai perso");
