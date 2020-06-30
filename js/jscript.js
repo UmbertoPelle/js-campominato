@@ -26,6 +26,10 @@ while (i < 5) {
   i++
 }
 
+if (arrayUtente.length == 5) {
+  alert("Congratulazione ,hai vinto!!")
+}
+
 
 console.log(arrayPc, arrayUtente);
 // functions
