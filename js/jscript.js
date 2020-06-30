@@ -1,13 +1,17 @@
-var arrayPc = [1,2];
+var arrayPc = [];
 var arrayUtente = [];
+var listaPc= document.getElementById("listaPc");
+var listaUtente= document.getElementById("listaUtente");
+
 
 // inserimento numeri array pc
 for (var i = 0; i < 5; i++) {
-  var temp = randomNum(1,100);
-  if (!(insideCheck(arrayPc,temp))) {
-    arrayPc.push(temp);
+  var numPc = randomNum(1,100);
+  if (!(insideCheck(arrayPc,numPc))) {
+    arrayPc.push(numPc);
+    listaPc.innerHTML += "<li>" + numPc + "</li>" ;
   } else {
-    temp = randomNum(1,100);
+    numPc = randomNum(1,100);
   }
 }
 
@@ -17,6 +21,7 @@ while (arrayUtente.length < 5) {
 
   if (insideCheck(arrayPc, numUtente)) {
     alert("hai perso");
+    listaUtente.innerHTML += "<li>" + numUtente + "</li>" ;
     break
   }
 
@@ -26,6 +31,7 @@ while (arrayUtente.length < 5) {
   }
 
   arrayUtente.push(numUtente);
+  listaUtente.innerHTML += "<li>" + numUtente + "</li>" ;
 
 }
 
