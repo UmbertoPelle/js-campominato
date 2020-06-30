@@ -1,6 +1,7 @@
-var arrayPc = [];
+var arrayPc = [3];
 var arrayUtente = [];
 
+// inserimento numeri array pc
 for (var i = 0; i < 5; i++) {
   var temp = randomNum(1,100);
   if (!(insideCheck(arrayPc,temp))) {
@@ -10,28 +11,30 @@ for (var i = 0; i < 5; i++) {
   }
 }
 
-var i=0;
-while (i < 5) {
-  var temp = parseInt(prompt("inserisci un numero"));
-  if (!(insideCheck(arrayUtente,temp))) {
-    arrayUtente.push(temp);
-  } else {
-    temp = parseInt(prompt("numero gia presente, prova un altro:"));
+// inserimento numero lista utente
+
+while (arrayUtente.length < 5) {
+  var numUtente = parseInt(prompt("dammi un numero"));
+
+  if (insideCheck(arrayPc, numUtente)) {
+    alert("hai perso")
+    break
   }
 
-  if (insideCheck(arrayPc,temp)) {
-    alert("numero presente hai perso!")
+  if (insideCheck(arrayUtente, numUtente)) {
+    numUtente = parseInt(prompt("dato già presente, riprova:"))
+  }else {
+    arrayUtente.push(numUtente);
   }
 
-  i++
 }
-
+// condizione vittoria
 if (arrayUtente.length == 5) {
   alert("Congratulazione ,hai vinto!!")
 }
 
 
-console.log(arrayPc, arrayUtente);
+console.log("Lista PC: ",arrayPc,"Lista UTENTE: ", arrayUtente);
 // functions
 function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
