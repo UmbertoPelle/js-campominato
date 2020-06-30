@@ -20,8 +20,10 @@ while (arrayUtente.length < 5) {
     break
   }
 
-  while (insideCheck(arrayUtente, numUtente)) {
+  var z = 0;
+  while (insideCheck(arrayUtente, numUtente) && z < 10) {
     numUtente = parseInt(prompt("dato già presente, riprova:"));
+    z++
   }
 
   arrayUtente.push(numUtente);
