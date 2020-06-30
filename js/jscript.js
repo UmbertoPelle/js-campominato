@@ -1,4 +1,4 @@
-var arrayPc = [99];
+var arrayPc = [];
 var arrayUtente = [];
 
 // inserimento numeri array pc
@@ -12,25 +12,22 @@ for (var i = 0; i < 5; i++) {
 }
 
 // inserimento numero lista utente
-
 while (arrayUtente.length < 5) {
   var numUtente = parseInt(prompt("dammi un numero"));
 
   if (insideCheck(arrayPc, numUtente)) {
     alert("hai perso");
-    arrayUtente.push(numUtente);
     break
   }
 
-  var z=0;
-  while (insideCheck(arrayUtente, numUtente) && z <10) {
+  while (insideCheck(arrayUtente, numUtente)) {
     numUtente = parseInt(prompt("dato già presente, riprova:"));
-    z++;
   }
 
   arrayUtente.push(numUtente);
 
 }
+
 // condizione vittoria
 if (arrayUtente.length == 5) {
   alert("Congratulazione ,hai vinto!!")
