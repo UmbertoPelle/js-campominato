@@ -1,4 +1,4 @@
-var arrayPc = [];
+var arrayPc = [1,2];
 var arrayUtente = [];
 
 // inserimento numeri array pc
@@ -43,11 +43,11 @@ function randomNum(min, max) {
 }
 
 function insideCheck(array , num) {
+  var temp = false;
   for (var i = 0; i < array.length; i++) {
     if (array[i]== num) {
-      return true;
-    } else {
-      return false;
+      temp = true;
     }
   }
+  return temp
 }
