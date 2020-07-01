@@ -10,23 +10,24 @@ for (var i = 0; i < 5; i++) {
   if (!(insideCheck(arrayPc,numPc))) {
     arrayPc.push(numPc);
     listaPc.innerHTML += "<li>" + numPc + "</li>" ;
-  } else {
-    numPc = randomNum(1,100);
-  }
+  } //else {
+  //   numPc = randomNum(1,100);
+  // }
 }
 
 // inserimento numero lista utente
-while (arrayUtente.length < 5) {
-  var numUtente = parseInt(prompt("inserisci un numero da 1 a 100:"));
+var trovato = false;
+var numUtente = 0;
+while (arrayUtente.length < 5 && trovato == false) {
+  numUtente = parseInt(prompt("inserisci un numero da 1 a 100:"));
 
-  while (isNaN(numUtente)) {
+  if (range(numUtente,1,100) == false) {
     numUtente = parseInt(prompt("Devi inserire un valore valido:"));
   }
 
   if (insideCheck(arrayPc, numUtente)) {
     alert("hai perso");
-    listaUtente.innerHTML += "<li>" + numUtente + "</li>" ;
-    break
+    trovato = true;
   }
 
 
@@ -34,10 +35,15 @@ while (arrayUtente.length < 5) {
     numUtente = parseInt(prompt("dato già presente, riprova:"));
   }
 
-  arrayUtente.push(numUtente);
-  listaUtente.innerHTML += "<li>" + numUtente + "</li>" ;
+  if (insideCheck(arrayUtente,numUtente) == false && range(numUtente,0,101) && insideCheck(arrayPc, numUtente) == false) {
+    arrayUtente.push(numUtente);
+    listaUtente.innerHTML += "<li>" + numUtente + "</li>" ;
+  }
+
 
 }
+
+
 
 // condizione vittoria
 if (arrayUtente.length == 5) {
@@ -59,4 +65,12 @@ function insideCheck(array , num) {
     }
   }
   return temp
+}
+
+function range(num , min , max) {
+  if (num >= min && num <= max && !isNaN(num)) {
+    return true
+  } else {
+    return false
+  }
 }
