@@ -21,7 +21,6 @@ btnDiff.addEventListener("click",function(){
       var numPc = randomNum(1,100);
       if (!(insideCheck(arrayPc,numPc))) {
         arrayPc.push(numPc);
-        listaPc.innerHTML += "<li>" + numPc + "</li>" ;
       }
     }
     console.log("Lista PC: ",arrayPc);
@@ -39,6 +38,9 @@ btnDiff.addEventListener("click",function(){
       if (insideCheck(arrayPc, numUtente)) {
         trovato = true;
         errore.innerHTML = "Hai perso , il numero inserito è una bomba ➛"+numUtente + "💣";
+        for (var i = 0; i < arrayPc.length; i++) {
+          listaPc.innerHTML += "<li>" + arrayPc[i] + "</li>" ;
+        }
       }
 
       while (insideCheck(arrayUtente, numUtente)) {
@@ -58,7 +60,6 @@ btnDiff.addEventListener("click",function(){
       var numPc = randomNum(1,80);
       if (!(insideCheck(arrayPc,numPc))) {
         arrayPc.push(numPc);
-        listaPc.innerHTML += "<li>" + numPc + "</li>" ;
       }
     }
     console.log("Lista PC: ",arrayPc);
@@ -76,6 +77,9 @@ btnDiff.addEventListener("click",function(){
       if (insideCheck(arrayPc, numUtente)) {
         trovato = true;
         errore.innerHTML = "Hai perso , il numero inserito è una bomba ➛"+numUtente + "💣";
+        for (var i = 0; i < arrayPc.length; i++) {
+          listaPc.innerHTML += "<li>" + arrayPc[i] + "</li>" ;
+        }
       }
 
       while (insideCheck(arrayUtente, numUtente)) {
@@ -95,7 +99,6 @@ btnDiff.addEventListener("click",function(){
       var numPc = randomNum(1,50);
       if (!(insideCheck(arrayPc,numPc))) {
         arrayPc.push(numPc);
-        listaPc.innerHTML += "<li>" + numPc + "</li>" ;
       }
     }
     console.log("Lista PC: ",arrayPc);
@@ -113,6 +116,9 @@ btnDiff.addEventListener("click",function(){
       if (insideCheck(arrayPc, numUtente)) {
         trovato = true;
         errore.innerHTML = "Hai perso , il numero inserito è una bomba ➛"+numUtente + "💣";
+        for (var i = 0; i < arrayPc.length; i++) {
+          listaPc.innerHTML += "<li>" + arrayPc[i] + "</li>" ;
+        }
       }
 
       while (insideCheck(arrayUtente, numUtente)) {
@@ -131,6 +137,9 @@ btnDiff.addEventListener("click",function(){
   // condizione vittoria
   if (arrayUtente.length == 16) {
     win.innerHTML="Congratulazioni, hai vinto!!";
+    for (var i = 0; i < arrayPc.length; i++) {
+      listaPc.innerHTML += "<li>" + arrayPc[i] + "</li>" ;
+    }
   }
 });
 
