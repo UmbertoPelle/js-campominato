@@ -22,7 +22,7 @@ btnDiff.addEventListener("click",function(){
     // inserimento numero lista utente
     var trovato = false;
     var numUtente = 0;
-    while (arrayUtente.length < 5 && trovato == false) {
+    while (arrayUtente.length < 16 && trovato == false) {
       numUtente = parseInt(prompt("inserisci un numero da 1 a 100:"));
 
       while (range(numUtente,1,100) == false) {
@@ -31,7 +31,7 @@ btnDiff.addEventListener("click",function(){
 
       if (insideCheck(arrayPc, numUtente)) {
         trovato = true;
-        errore.innerHTML = "Hai perso , il numero inserito è una bomba ->"+numUtente;
+        errore.innerHTML = "Hai perso , il numero inserito è una bomba ➛"+numUtente + "💣";
       }
 
       while (insideCheck(arrayUtente, numUtente)) {
@@ -59,7 +59,7 @@ btnDiff.addEventListener("click",function(){
     // inserimento numero lista utente
     var trovato = false;
     var numUtente = 0;
-    while (arrayUtente.length < 5 && trovato == false) {
+    while (arrayUtente.length < 16 && trovato == false) {
       numUtente = parseInt(prompt("inserisci un numero da 1 a 80:"));
 
       while (range(numUtente,1,80) == false) {
@@ -68,7 +68,7 @@ btnDiff.addEventListener("click",function(){
 
       if (insideCheck(arrayPc, numUtente)) {
         trovato = true;
-        errore.innerHTML = "Hai perso , il numero inserito è una bomba ->"+numUtente;
+        errore.innerHTML = "Hai perso , il numero inserito è una bomba ➛"+numUtente + "💣";
       }
 
       while (insideCheck(arrayUtente, numUtente)) {
@@ -96,7 +96,7 @@ btnDiff.addEventListener("click",function(){
     // inserimento numero lista utente
     var trovato = false;
     var numUtente = 0;
-    while (arrayUtente.length < 5 && trovato == false) {
+    while (arrayUtente.length < 16 && trovato == false) {
       numUtente = parseInt(prompt("inserisci un numero da 1 a 50:"));
 
       while (range(numUtente,1,50) == false) {
@@ -105,7 +105,7 @@ btnDiff.addEventListener("click",function(){
 
       if (insideCheck(arrayPc, numUtente)) {
         trovato = true;
-        errore.innerHTML = "Hai perso , il numero inserito è una bomba ->"+numUtente;
+        errore.innerHTML = "Hai perso , il numero inserito è una bomba ➛"+numUtente + "💣";
       }
 
       while (insideCheck(arrayUtente, numUtente)) {
@@ -121,7 +121,7 @@ btnDiff.addEventListener("click",function(){
 
   }
   // condizione vittoria
-  if (arrayUtente.length == 5) {
+  if (arrayUtente.length == 16) {
     win.innerHTML="Congratulazioni, hai vinto!!";
   }
 });
