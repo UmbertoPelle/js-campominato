@@ -1,12 +1,19 @@
-var arrayPc = [];
-var arrayUtente = [];
 var btnDiff =document.getElementById("btn");
 var listaPc= document.getElementById("listaPc");
 var listaUtente= document.getElementById("listaUtente");
 var errore = document.getElementById("errore");
 var win = document.getElementById("win");
 
+// avvio gioco
 btnDiff.addEventListener("click",function(){
+  var arrayPc = [];
+  var arrayUtente = [];
+  errore.innerHTML = "";
+  listaPc.innerHTML = "" ;
+  listaUtente.innerHTML = "" ;
+  win.innerHTML= "";
+
+ // scelta difficoltà
   var difficoltà= document.getElementById("difficoltà").value;
   if (difficoltà==0) {
     // inserimento numeri array pc
@@ -120,6 +127,7 @@ btnDiff.addEventListener("click",function(){
 
 
   }
+
   // condizione vittoria
   if (arrayUtente.length == 16) {
     win.innerHTML="Congratulazioni, hai vinto!!";
