@@ -10,7 +10,7 @@ body{
 #select{
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 #listContainer{
   display: flex;
@@ -29,4 +29,15 @@ footer{
   right: 10px;
   font-size: 15px;
   color: grey;
+}
+h2{
+  color: #9a9696;
+}
+#errore{
+  color: #fb6d11;
+}
+#btn{
+  border-radius: 24px;
+  padding: 15px;
+  margin-left: 5px;
 }
