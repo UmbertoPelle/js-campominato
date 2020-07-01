@@ -1,0 +1,25 @@
+body{
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/99dd2a00-9374-49ca-9871-223164cecd85/dc6nir0-708829cd-8b31-4938-a403-5fe2f59e2c31.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOTlkZDJhMDAtOTM3NC00OWNhLTk4NzEtMjIzMTY0Y2VjZDg1XC9kYzZuaXIwLTcwODgyOWNkLThiMzEtNDkzOC1hNDAzLTVmZTJmNTllMmMzMS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.hYMBB6rhwdPU9IYez-FUN2of7ArMh8sNoxwAQDVut1I");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align:center;
+  font-size: 25px;
+  color: #fff;
+}
+#select{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#listContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+ul{
+  list-style: none;
+}
+ul li{
+  color: red;
+}

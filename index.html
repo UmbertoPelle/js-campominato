@@ -2,23 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Campo minato</title>
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
 
-    <select  id="difficoltà" name="difficoltà">
-      <option value="0">FACILE</option>
-      <option value="1">NORMALE</option>
-      <option value="2">DIFFICILE</option>
-    </select>
-    <button id="btn" type="button" name="button">Scegli difficoltà</button>
+    <div id="select">
+      <select  id="difficoltà" name="difficoltà">
+        <option value="0">FACILE</option>
+        <option value="1">NORMALE</option>
+        <option value="2">DIFFICILE</option>
+      </select>
+      <button id="btn" type="button" name="button">Scegli difficoltà</button>
+    </div>
     <p id="errore"></p>
-    <ul id="listaPc">
-
-    </ul>
-    <ul id="listaUtente">
-
-    </ul>
+    <div id="listContainer">
+      <ul id="listaUtente"></ul>
+      <ul id="listaPc"></ul>
+    </div>
     <h1 id="win"></h1>
 
 
