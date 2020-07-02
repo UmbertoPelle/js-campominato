@@ -4,6 +4,8 @@ var listaUtente= document.getElementById("listaUtente");
 var errore = document.getElementById("errore");
 var win = document.getElementById("win");
 
+
+
 // avvio gioco
 btnDiff.addEventListener("click",function(){
   var arrayPc = [];
